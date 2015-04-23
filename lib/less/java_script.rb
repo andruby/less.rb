@@ -5,6 +5,9 @@ module Less
       if defined?(JRUBY_VERSION)
         require 'less/java_script/rhino_context'
         RhinoContext
+      elsif defined?(ExecJS)
+        require 'less/java_script/execjs_context'
+        ExecjsContext
       else
         require 'less/java_script/v8_context'
         V8Context
