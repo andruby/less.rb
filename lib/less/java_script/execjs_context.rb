@@ -28,7 +28,7 @@ module Less
       def call(properties, *args)
         args.last.is_a?(::Hash) ? args.pop : nil # extract_options!
 
-        ExecJS.eval(properties).call(*args)
+        ExecJS.call(properties, args)
       end
 
       def method_missing(symbol, *args)
