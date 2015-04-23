@@ -12,9 +12,9 @@ module Less
     def initialize
       context_wrapper = Less::JavaScript.context_wrapper.instance
       @context = context_wrapper.unwrap
-      @context['process'] = Process.new
-      @context['console'] = Console.new
-      @context['Buffer'] = Buffer
+      #@context['process'] = Process.new
+      #@context['console'] = Console.new
+      #@context['Buffer'] = Buffer
       path = Pathname(__FILE__).dirname.join('js', 'lib')
       @environment = CommonJS::Environment.new(@context, :path => path.to_s)
       @environment.native('path', Path)
