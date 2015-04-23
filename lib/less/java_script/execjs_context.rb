@@ -1,12 +1,3 @@
-begin
-  require 'execjs'
-rescue LoadError => e
-  warn "[WARNING] Please install gem 'execjs' to use Less."
-  raise e
-end
-
-require 'pathname'
-
 module Less
   module JavaScript
     class ExecjsContext
