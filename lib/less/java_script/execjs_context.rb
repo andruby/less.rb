@@ -1,3 +1,5 @@
+require 'execjs'
+
 module Less
   module JavaScript
     class ExecjsContext
